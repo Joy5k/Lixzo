@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoom And Move</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div  class="h-vh bg-gray-300 ">
+    
+<div class="h-vh flex flex-col gap-2 justify-center items-center">
+
+    <div id="window" class="w-100 h-100 bg-white">
+        <div id="object" class="w-50 h-50 bg-green-300">
+            <img src="./images/nissan_gtr.png" alt="window_image" class="w-full h-full object-contain">
+        </div>
+    </div>
+
+    <div class="w-100 border flex flex-col gap-2 font-bold text-white">
+
+        <div class="flex flex-col justify-between gap-2">
+            <div class="flex justify-between gap-2">
+                <!-- <p>Scale</p> -->
+                <div class="w-10">Scale</div>
+                <div class="flex items-center justify-center">25%</div>
+            </div>
+            <input type="range" name="" id="zoom" min="0.25" max="2" value="0.25" step="0.05">
+        </div>
+
+        <div class="flex flex-col justify-between gap-2">
+            <div class="flex justify-between gap-2">
+                <div class="w-10">Left</div>
+                <div class="flex items-center justify-center">0%</div>
+                <div class="w-10 text-right">Right</div>
+            </div>
+            <input type="range" name="" id="move_x" min="-0.9" max="0.9" value="0" step="0.05">
+        </div>
+
+        <div class="flex flex-col justify-between gap-2">
+            <div class="flex justify-between gap-2">
+                <div class="w-10">Up</div>
+                <div class="flex items-center justify-center">0%</div>
+                <div class="w-10 text-right">Down</div>
+            </div>
+            <input type="range" name="" id="move_y" min="-0.9" max="0.9" value="0" step="0.05">
+        </div>
+
+    </div>
+</div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
