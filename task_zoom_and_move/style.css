@@ -1,4 +1,38 @@
 /* bg */
+.z-index{
+    z-index: 1000;
+}
+/* Window container styling */
+#window {
+    position: relative;
+    width: 500px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    overflow: hidden; /* Hide overflow to ensure the image stays within bounds */
+    z-index: 10;
+    border: 2px solid black; /* Optional for visibility */
+    background-color: white; /* Background for visibility */
+}
+
+/* Object (image container) */
+#object {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Initial positioning */
+    transition: transform 0.3s ease; /* Smooth transition */
+    max-width: none; /* Disable max-width to allow scaling */
+    max-height: none; /* Disable max-height to allow scaling */
+}
+
+/* Image styling */
+#object img {
+    width: auto; /* Allow width to be flexible */
+    height: auto; /* Allow height to be flexible */
+    object-fit: contain; /* Ensure the image fits well */
+    max-width: 100%; /* Prevent image from exceeding container width */
+    max-height: 100%; /* Prevent image from exceeding container height */
+}
+
 .bg-green-300 {
     background-color: #00bf1f;
 }
@@ -80,9 +114,6 @@
 .w-50 {
     width: 12.5rem;
 }
-
-
-/****************/
 
 input[type=range] {
     -webkit-appearance: none;
